@@ -1,0 +1,435 @@
+<!--http://coin.ninesquares.biz/agk/apartment_list.html-->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>АГК Строительная компания</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link href="css/jquery.formstyler.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/media.css"/>
+
+</head>
+
+<body>
+<header class="fixed">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-1">
+                <div class="logo"><a href="/"><img src="images/logo_agk.png" alt="img"></a></div>
+            </div>
+            <div class="col-lg-5 col-md-9 hidden-sm hidden-xs">
+                <div class="header-menu">
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">О Компании </a></li>
+                        <li><a href="#">Каталог квартир</a></li>
+                        <li><a href="#">Новости и Акции</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 hidden-md hidden-sm hidden-xs">
+                <div class="contacts">
+                    <div class="phone">
+                        <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <span>8 (800) 000-00-00, 8 (800) 000-00-00</span>
+                    </div>
+                    <div class="address">
+                        <span>Нижний Новгород, ул.Гордеевская 59Б к1, офис 14</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden-lg hidden-md col-xs-offset-8 col-xs-1">
+                <div class="agk-dd-menu">
+                    <button class="agk-dd-open">
+                        <span></span><span></span><span></span>
+                    </button>
+
+                    <div class="dd-cont">
+                        <div class="container">
+                            <div class="header-dd-menu">
+                                <ul>
+                                    <li><a href="#">Главная</a></li>
+                                    <li><a href="#">О Компании </a></li>
+                                    <li><a href="#">Каталог квартир</a></li>
+                                    <li><a href="#">Новости и Акции</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                </ul>
+                                <a href="#" class="agk-btn white">Подобрать квартиру</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="about-cont apartment_list">
+    <div class="container">
+        <div class="row">
+            <div class="agk-slick">
+                <div class="agk-slide"><img src="images/top_img.jpg" alt="img"></div>
+                <div class="agk-slide"><img src="images/top_img.jpg" alt="img"></div>
+                <div class="agk-slide"><img src="images/top_img.jpg" alt="img"></div>
+            </div>
+            <div class="agk-arrows">
+                <a href="#" class="arrow-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                <a href="#" class="arrow-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="breadcrumbs">
+            <ul>
+                <li><a href="#">Главная</a></li>
+            </ul>
+        </div>
+        <div class="title">
+            <h3>Объекты в продаже</h3>
+        </div>
+        <form action="">
+            <div class="row filtr">
+                <div class="flat col-lg-2 col-md-5 col-sm-5 col-xs-10">
+                    <label for="flat">
+                        ОБЪЕКТ ПРОДАЖИ
+                    </label>
+                    <select name="flat" id=flat"">
+                        <option></option>
+                        <option> Дом 46 ЖК Бурнаковский</option>
+                        <option>Дом 12 ЖК Корабли</option>
+                        <option>ДОМ 34 ЖК ЮГ</option>
+                    </select>
+                </div>
+                <div class=" room col-lg-2 col-md-5 col-sm-5 col-xs-10">
+                    <label for="room">
+                        Количество комнат
+                    </label>
+                    <select name="room" id="room">
+                        <option></option>
+                        <option>Студия</option>
+                        <option>1-ком квартира</option>
+                        <option>2-ком квартира</option>
+                        <option>3-ком квартира</option>
+                        <option>4-ком квартира</option>
+                    </select>
+                </div>
+                <div class="flor col-lg-2 col-md-3 col-sm-5 col-xs-10">
+                    <label>
+                        Этаж
+                    </label>
+                    <p>
+                        <input type="text" id="amount-flor" readonly>
+                    </p>
+                    <div id="slider-range-flor"></div>
+                </div>
+                <div class="sq col-lg-2 col-md-3 col-sm-5 col-xs-10">
+                    <label>
+                        Площадь
+                    </label>
+                    <p>
+                        <input type="text" id="amount-sq" readonly>
+                    </p>
+                    <div id="slider-range-sq"></div>
+                </div>
+                <div class="price col-lg-2 col-md-3 col-sm-5 col-xs-10">
+                    <label>
+                        Стоимость
+                    </label>
+                    <p>
+                        <input type="text" id="amount-sum" readonly>
+                    </p>
+                    <div id="slider-range-sum"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-8 col-lg-2 col-md-offset-8 col-md-2 col-sm-offset-6 col-sm-4  col-xs-10">
+                    <a class="submit" href="#">Сортировать</a>
+                </div>
+            </div>
+        </form>
+        <div class="flex-cont similar">
+            <div class="item">
+                <h6 class="title">Квартира</h6>
+                <h4 class="sub-title">2-комнатная</h4>
+                <div class="image"><img src="images/apartment_2.jpg" alt="img"></div>
+                <div class="char">
+                    <span class="fl">Этаж: <span class="value">1</span></span>
+                    <span class="sq">Общая пл.: <span class="value">36 кв.м.</span></span>
+                    <span class="lv-sq"> Жилая пл.: <span class="value">28 кв.м.</span></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="price">4 580 000 руб.</div>
+                <a href="#" class="more">подробнее...</a>
+            </div>
+            <div class="item">
+                <h6 class="title">Квартира</h6>
+                <h4 class="sub-title">2-комнатная</h4>
+                <div class="image"><img src="images/apartment_2.jpg" alt="img"></div>
+                <div class="char">
+                    <span class="fl">Этаж: <span class="value">1</span></span>
+                    <span class="sq">Общая пл.: <span class="value">36 кв.м.</span></span>
+                    <span class="lv-sq"> Жилая пл.: <span class="value">28 кв.м.</span></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="price">4 580 000 руб.</div>
+                <a href="#" class="more">подробнее...</a>
+            </div>
+            <div class="item">
+                <h6 class="title">Квартира</h6>
+                <h4 class="sub-title">2-комнатная</h4>
+                <div class="image"><img src="images/apartment_2.jpg" alt="img"></div>
+                <div class="char">
+                    <span class="fl">Этаж: <span class="value">1</span></span>
+                    <span class="sq">Общая пл.: <span class="value">36 кв.м.</span></span>
+                    <span class="lv-sq"> Жилая пл.: <span class="value">28 кв.м.</span></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="price">4 580 000 руб.</div>
+                <a href="#" class="more">подробнее...</a>
+            </div>
+            <div class="item">
+                <h6 class="title">Квартира</h6>
+                <h4 class="sub-title">2-комнатная</h4>
+                <div class="image"><img src="images/apartment_2.jpg" alt="img"></div>
+                <div class="char">
+                    <span class="fl">Этаж: <span class="value">1</span></span>
+                    <span class="sq">Общая пл.: <span class="value">36 кв.м.</span></span>
+                    <span class="lv-sq"> Жилая пл.: <span class="value">28 кв.м.</span></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="price">4 580 000 руб.</div>
+                <a href="#" class="more">подробнее...</a>
+            </div>
+            <div class="item">
+                <h6 class="title">Квартира</h6>
+                <h4 class="sub-title">2-комнатная</h4>
+                <div class="image"><img src="images/apartment_2.jpg" alt="img"></div>
+                <div class="char">
+                    <span class="fl">Этаж: <span class="value">1</span></span>
+                    <span class="sq">Общая пл.: <span class="value">36 кв.м.</span></span>
+                    <span class="lv-sq"> Жилая пл.: <span class="value">28 кв.м.</span></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="price">4 580 000 руб.</div>
+                <a href="#" class="more">подробнее...</a>
+            </div>
+            <div class="item">
+                <h6 class="title">Квартира</h6>
+                <h4 class="sub-title">2-комнатная</h4>
+                <div class="image"><img src="images/apartment_2.jpg" alt="img"></div>
+                <div class="char">
+                    <span class="fl">Этаж: <span class="value">1</span></span>
+                    <span class="sq">Общая пл.: <span class="value">36 кв.м.</span></span>
+                    <span class="lv-sq"> Жилая пл.: <span class="value">28 кв.м.</span></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="price">4 580 000 руб.</div>
+                <a href="#" class="more">подробнее...</a>
+            </div>
+            <div class="item">
+                <h6 class="title">Квартира</h6>
+                <h4 class="sub-title">2-комнатная</h4>
+                <div class="image"><img src="images/apartment_2.jpg" alt="img"></div>
+                <div class="char">
+                    <span class="fl">Этаж: <span class="value">1</span></span>
+                    <span class="sq">Общая пл.: <span class="value">36 кв.м.</span></span>
+                    <span class="lv-sq"> Жилая пл.: <span class="value">28 кв.м.</span></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="price">4 580 000 руб.</div>
+                <a href="#" class="more">подробнее...</a>
+            </div>
+            <div class="item">
+                <h6 class="title">Квартира</h6>
+                <h4 class="sub-title">2-комнатная</h4>
+                <div class="image"><img src="images/apartment_2.jpg" alt="img"></div>
+                <div class="char">
+                    <span class="fl">Этаж: <span class="value">1</span></span>
+                    <span class="sq">Общая пл.: <span class="value">36 кв.м.</span></span>
+                    <span class="lv-sq"> Жилая пл.: <span class="value">28 кв.м.</span></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="price">4 580 000 руб.</div>
+                <a href="#" class="more">подробнее...</a>
+            </div>
+            <div class="item">
+                <h6 class="title">Квартира</h6>
+                <h4 class="sub-title">2-комнатная</h4>
+                <div class="image"><img src="images/apartment_2.jpg" alt="img"></div>
+                <div class="char">
+                    <span class="fl">Этаж: <span class="value">1</span></span>
+                    <span class="sq">Общая пл.: <span class="value">36 кв.м.</span></span>
+                    <span class="lv-sq"> Жилая пл.: <span class="value">28 кв.м.</span></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="price">4 580 000 руб.</div>
+                <a href="#" class="more">подробнее...</a>
+            </div>
+            <div class="item">
+                <h6 class="title">Квартира</h6>
+                <h4 class="sub-title">2-комнатная</h4>
+                <div class="image"><img src="images/apartment_2.jpg" alt="img"></div>
+                <div class="char">
+                    <span class="fl">Этаж: <span class="value">1</span></span>
+                    <span class="sq">Общая пл.: <span class="value">36 кв.м.</span></span>
+                    <span class="lv-sq"> Жилая пл.: <span class="value">28 кв.м.</span></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="price">4 580 000 руб.</div>
+                <a href="#" class="more">подробнее...</a>
+            </div>
+            <div class="item">
+                <h6 class="title">Квартира</h6>
+                <h4 class="sub-title">2-комнатная</h4>
+                <div class="image"><img src="images/apartment_2.jpg" alt="img"></div>
+                <div class="char">
+                    <span class="fl">Этаж: <span class="value">1</span></span>
+                    <span class="sq">Общая пл.: <span class="value">36 кв.м.</span></span>
+                    <span class="lv-sq"> Жилая пл.: <span class="value">28 кв.м.</span></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="price">4 580 000 руб.</div>
+                <a href="#" class="more">подробнее...</a>
+            </div>
+            <div class="item">
+                <h6 class="title">Квартира</h6>
+                <h4 class="sub-title">2-комнатная</h4>
+                <div class="image"><img src="images/apartment_2.jpg" alt="img"></div>
+                <div class="char">
+                    <span class="fl">Этаж: <span class="value">1</span></span>
+                    <span class="sq">Общая пл.: <span class="value">36 кв.м.</span></span>
+                    <span class="lv-sq"> Жилая пл.: <span class="value">28 кв.м.</span></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="price">4 580 000 руб.</div>
+                <a href="#" class="more">подробнее...</a>
+            </div>
+            <div class="item">
+                <h6 class="title">Квартира</h6>
+                <h4 class="sub-title">2-комнатная</h4>
+                <div class="image"><img src="images/apartment_2.jpg" alt="img"></div>
+                <div class="char">
+                    <span class="fl">Этаж: <span class="value">1</span></span>
+                    <span class="sq">Общая пл.: <span class="value">36 кв.м.</span></span>
+                    <span class="lv-sq"> Жилая пл.: <span class="value">28 кв.м.</span></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="price">4 580 000 руб.</div>
+                <a href="#" class="more">подробнее...</a>
+            </div>
+            <div class="item">
+                <h6 class="title">Квартира</h6>
+                <h4 class="sub-title">2-комнатная</h4>
+                <div class="image"><img src="images/apartment_2.jpg" alt="img"></div>
+                <div class="char">
+                    <span class="fl">Этаж: <span class="value">1</span></span>
+                    <span class="sq">Общая пл.: <span class="value">36 кв.м.</span></span>
+                    <span class="lv-sq"> Жилая пл.: <span class="value">28 кв.м.</span></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="price">4 580 000 руб.</div>
+                <a href="#" class="more">подробнее...</a>
+            </div>
+            <div class="item">
+                <h6 class="title">Квартира</h6>
+                <h4 class="sub-title">2-комнатная</h4>
+                <div class="image"><img src="images/apartment_2.jpg" alt="img"></div>
+                <div class="char">
+                    <span class="fl">Этаж: <span class="value">1</span></span>
+                    <span class="sq">Общая пл.: <span class="value">36 кв.м.</span></span>
+                    <span class="lv-sq"> Жилая пл.: <span class="value">28 кв.м.</span></span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="price">4 580 000 руб.</div>
+                <a href="#" class="more">подробнее...</a>
+            </div>
+        </div>
+        <div class="pagination">
+            <ul>
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li></li>
+                <li></li>
+            </ul>
+            <span>Показаны <span class="first-show"> 1 </span> - <span class="last-show"> 15 </span>из <span class="all"> 32 </span></span>
+            <br>
+            <a class="disabled prev-list" href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i>Предыдущая</a>
+            <a class="next-list" href="#">Следующая<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="flex-cont f-top">
+                <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+                    <div class="logo"><a href="/"><img src="images/logo_agk.png" alt="img"></a></div>
+                    <div class="networks">
+                        <span>Мы в с соцсетях</span>
+                        <a href="#"><span class="cirkle"><i class="fa fa-facebook" aria-hidden="true"></i></span></a>
+                        <a href="#"><span class="cirkle"><span>В</span></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
+                    <h4 class="agk-b-menu-title">ООО АГК</h4>
+                    <ul class="agk-b-menu">
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Новости и Акции</a></li>
+                        <li><a href="#">Тендеры</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Раскрытие информации</a></li>
+                        <li><a href="#">Документы</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
+                    <h4 class="agk-sell-menu-title">В продаже</h4>
+                    <ul class="agk-sell-menu">
+                        <li><a href="#">Дом №46 ЖК Бурнаковский</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 text-right hidden-sm hidden-xs">
+                    <a href="#" class="agk-btn white">
+                        <span class="cirkle"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        Заказть звонок
+                    </a>
+                    <a href="#" class="agk-btn white">
+                        <span class="cirkle"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        Задать вопрос
+                    </a>
+                </div>
+            </div>
+            <div class="flex-cont">
+                <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10">
+                    <div class="copyright">
+                        <p>Все права на публикуемые на сайте материалы принадлежат ООО «АГК» © 2015 — 2017</p>
+                        <p>Любая информация, представленная на данном сайте, носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437 ГК РФ.</p>
+                        <p>  Политика обработки персональных данных.</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10">
+                    <div class="copyright">
+                        <span class="author">Сделано в <span>NNovgorod3D</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

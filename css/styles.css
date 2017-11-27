@@ -161,12 +161,21 @@ header .phone span:first-child::before{
     border-radius: 50%;
     z-index: -1;
 }
+header.active .phone span:first-child,
+header.active .phone span:first-child::before {
+    display: none;
+}
 header .phone {
     margin-top: 12px;
     font-size: 21px;
     text-align: right;
     line-height: 27px;
     white-space: nowrap;
+}
+header.active .phone,
+header.active .address{
+    line-height: 2;
+    text-align: center;
 }
 header .address{
     margin-bottom: 9px;
@@ -201,12 +210,30 @@ header .header-menu ul > li:hover > a{
     right: 36px;
     z-index:1000;
 }
+.agk-dd-menu.active {
+    right: 50%;
+    margin-right: -23px;
+}
 .agk-dd-menu .agk-dd-open{
     border: none;
     box-shadow: none;
     background: transparent;
     margin-right: 12px;
 }
+.agk-dd-menu.active .agk-dd-open {
+    width: 46px;
+    height: 46px;
+    padding-top: 6px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin:auto;
+    border: 3px solid #fff;
+}
+.agk-dd-menu.active  .agk-dd-open span {
+    margin-left: 8px;
+}
+
 .agk-dd-menu .agk-dd-open span{
     display: block;
     width: 30px;
@@ -232,18 +259,21 @@ header .header-menu ul > li:hover > a{
     -ms-transform: rotate(-45deg)translate(0, -13px);
     transform: rotate(-45deg)translate(0, -13px);
 }
+.agk-dd-menu .header-dd-menu  ul li{
+    text-align: center;
+}
 .dd-cont {
     display: none;
     position: fixed;
     color: #fff;
-    top: 72px;
+    top: 0;
     left: 0;
-    padding-top: 40px;
+    padding-top: 116px;
     width: 100%;
     height: 100vh;
     padding-bottom: 80px;
     background: #03193d;
-    z-index:900;
+    z-index:-1;
 }
 .agk-dd-menu .header-dd-menu {
     position: absolute;
@@ -260,23 +290,15 @@ header .header-menu ul > li:hover > a{
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
 }
-header .agk-dd-menu  li::after {
-    content: '';
-    display: block;
-    background: #fff;
-    height: 2px;
-    width: 0;
-    transition: all 0.3s ease-out;
-}
-header .agk-dd-menu  li:hover::after {
-    width: 100%;
-}
 header .agk-dd-menu ul > li > a {
     color: #fff;
     font-size: 24px;
     line-height: 2;
 }
-/*header*/
+header .agk-dd-menu ul > li:hover > a {
+    text-decoration: underline;
+}
+/*!*header*!*/
 
 /*slider*/
 .main-cont, .about-cont, .apartment_inner, .calculator{
@@ -1623,6 +1645,12 @@ span.hidden{
 #slider-range span:first-child{
     display: none !important;
     background: #000;
+}
+#date-sort-styler{
+    margin-top: 44px;
+}
+#date-sort-styler .jq-selectbox__dropdown ul li:first-child{
+    display: none;
 }
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
     border: 0;

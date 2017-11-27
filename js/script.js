@@ -6,23 +6,21 @@ $(function () {
         slidesToShow: 1,
         fade: true,
         arrows: true,
-        // autoplay:true
+        autoplay:true
     });
     $('.sidebar .slider').slick({
         dots: false,
         infinite: true,
         speed: 900,
         slidesToShow: 1,
-        arrows: true,
-        // autoplay:true
+        arrows: true
     });
     $('.apart-slider').slick({
         dots: false,
         infinite: true,
         speed: 900,
         slidesToShow: 1,
-        arrows: true,
-        // autoplay:true
+        arrows: true
     });
     $('.agk-objects .slider').slick({
         dots: false,
@@ -52,6 +50,7 @@ $(function () {
     $('.agk-dd-menu .agk-dd-open').on('click',function () {
         $('.dd-cont').fadeToggle();
         $('.agk-dd-menu').toggleClass('active');
+        $('header').toggleClass('active');
     });
 
 

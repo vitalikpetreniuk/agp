@@ -229,7 +229,19 @@
 @media(max-width:768px){
     .agk-dd-menu .header-dd-menu {
         width: calc(100% - 30px);
+        height: calc(100vh - 150px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
+    header.active .col-xs-1 {
+        width: 100%;
+    }
+    header.active .col-xs-offset-8 {
+        margin-left: 15px;
+        margin-top: -60px;
+    }
+
     h3, h4, .apartment_list h3, .building h3{
         font-size: 18px;
         line-height: 30px;
@@ -469,6 +481,17 @@
     }
 }
 
+@media (max-width: 760px){
+    header.active .col-xs-offset-8 {
+        margin-left: 15px;
+        margin-top: -60px;
+    }
+
+    header.active .col-xs-1 {
+        width: calc(100% - 30px);
+    }
+}
+
 @media (max-width: 680px){
     .building .flex-cont .item {
         width: 48%;
@@ -535,10 +558,6 @@
     .agk-objects .slick-arrow {
         top: 58px;
     }
-    header .agk-dd-menu ul > li > a {
-        font-size: 18px;
-        line-height: 1.5;
-    }
 
     /*about*/
     .about-cont .image + .image {
@@ -600,14 +619,23 @@
     }
 }
 
-@media(max-height:400px) {
-    .agk-dd-menu .agk-btn.white {
-        display: none;
-    }
+@media(max-height:420px) {
     .dd-cont {
-        padding-top: 15px;
+        padding-top: 120px;
+        padding-bottom: 15px;
     }
     header .agk-dd-menu ul > li > a {
         line-height: 1.4;
+        font-size: 18px;
+    }
+    header.active .agk-dd-menu .contacts {
+        line-height: 1.2;
+        font-size: 18px;
+    }
+    .header-dd-menu ul{
+        margin-bottom: 40px;
+    }
+    .agk-dd-menu .header-dd-menu {
+        overflow-y: scroll;
     }
 }

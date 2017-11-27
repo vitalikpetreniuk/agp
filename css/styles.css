@@ -212,7 +212,6 @@ header .header-menu ul > li:hover > a{
 }
 .agk-dd-menu.active {
     right: 50%;
-    margin-right: -23px;
 }
 .agk-dd-menu .agk-dd-open{
     border: none;
@@ -228,6 +227,7 @@ header .header-menu ul > li:hover > a{
     -moz-border-radius: 50%;
     border-radius: 50%;
     margin:auto;
+    margin-right: -8px;
     border: 3px solid #fff;
 }
 .agk-dd-menu.active  .agk-dd-open span {
@@ -1469,6 +1469,20 @@ span.hidden{
     line-height: 38px;
     height: 38px;
  }
+#date-sort-styler{
+    position: absolute;
+    right: 0;
+}
+#date-sort-styler .jq-selectbox__select-text {
+    color: #0599c2;
+    bottom: 0;
+}
+#date-sort-styler .jq-selectbox__dropdown{
+    background: #fff;
+    padding: 5px;
+    top: 35px !important;
+    width: auto !important;
+}
 .jq-selectbox__select-text {
     padding: 0 10px;
 }
@@ -1599,16 +1613,14 @@ span.hidden{
     padding: 20px 0 50px;
     margin-bottom: 80px;
 }
-.building form .sort{
+.building form .sort {
     text-align: right;
+    padding-right: 220px;
 }
 .building form .sort > *{
     display: inline-block;
     font-size: 24px;
     margin-top: 80px;
-}
-.building form .sort ul li{
-    display: none;
 }
 .building form .sort ul li a{
     color: #0599c2;
@@ -1645,12 +1657,6 @@ span.hidden{
 #slider-range span:first-child{
     display: none !important;
     background: #000;
-}
-#date-sort-styler{
-    margin-top: 44px;
-}
-#date-sort-styler .jq-selectbox__dropdown ul li:first-child{
-    display: none;
 }
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
     border: 0;

@@ -53,9 +53,9 @@ $(function () {
         $('header').toggleClass('active');
     });
 
-    // Єтот скрипт работает и все в порядке, если стоит перед скриптами с плагином ползунков, сейчас не работает
-    if ($( "input, select" ).length) {
-        $('input, select').styler();
+
+    if ($( "select" ).length) {
+        $('select').styler();
     }
 
     if ($( "#slider-range-max" ).length) {
@@ -150,5 +150,13 @@ $(function () {
         });
         $( "#amount-sum" ).val(  $( "#slider-range-sum" ).slider( "values", 0 )+  "                  " +  $( "#slider-range-sum" ).slider( "values", 1 ) );
     }
+    $('#callback').modal({
+            keyboard: true,
+            show: false
+        });
+    $('#ask').modal({
+            keyboard: true,
+            show: false
+        });
 
 });

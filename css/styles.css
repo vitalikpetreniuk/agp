@@ -1379,10 +1379,10 @@ span.hidden{
 /*apartment_list*/
 .apartment_list .flex-cont {
     margin: 0;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
 }
 .apartment_list .flex-cont .item{
     margin-right: calc((100% - 18%*5)/4);

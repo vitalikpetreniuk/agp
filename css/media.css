@@ -48,6 +48,12 @@
     .apartment_inner .flex-cont .item, .apartment_list .flex-cont .item {
         width: 32%;
     }
+    .apartment_list .flex-cont .item:nth-child(n){
+        margin-right: calc((100% - 32%*3)/2);
+    }
+    .apartment_list .flex-cont .item:nth-child(3n+3){
+        margin-right:0;
+    }
     .apartment_list .filtr > div{
         margin-bottom: 20px;
     }
@@ -464,6 +470,12 @@
     .apartment_inner .flex-cont .item, .apartment_list .flex-cont .item {
         width: 46%;
     }
+    .apartment_list .flex-cont .item:nth-child(n){
+        margin-right: calc((100% - 46%*2));
+    }
+    .apartment_list .flex-cont .item:nth-child(2n+2){
+        margin-right:0;
+    }
     /*building*/
     .building .flex-cont .item {
         width: 46%;
@@ -503,6 +515,9 @@
     /*apartment_list*/
     .apartment_inner .flex-cont .item, .apartment_list .flex-cont .item {
         width: 100%;
+    }
+    .apartment_list .flex-cont .item:nth-child(n){
+        margin-right:0;
     }
     .apartment_inner .item .image, .apartment_list .item .image {
         float: left;

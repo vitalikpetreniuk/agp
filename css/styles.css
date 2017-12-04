@@ -704,13 +704,17 @@ footer .author{
     font-size: 14px;
     line-height: 26px;
 }
-footer .author > span{
+footer .author > a{
     display:inline-block;
     padding: 0 8px;
     background: #ffba01;
     -webkit-border-radius:13px;
     -moz-border-radius:13px;
     border-radius:13px;
+}
+footer .author > a:hover{
+    color: #fff;
+    opacity:0.7;
 }
 footer .cirkle{
     display: inline-block;
@@ -1379,6 +1383,12 @@ span.hidden{
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+}
+.apartment_list .flex-cont .item{
+    margin-right: calc((100% - 18%*5)/4);
+}
+.apartment_list .flex-cont .item:nth-child(5n+5){
+    margin-right:0;
 }
 .apartment_list .flex-cont .image,
 .apartment_inner .item .image{

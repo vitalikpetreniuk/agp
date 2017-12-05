@@ -4,11 +4,12 @@
     font-weight:normal;
     font-style:normal}
 @font-face {
-    font-family: 'Didact Gothic';
+    font-family: 'Didact Gothic Medium';
     src: url('../fonts/Didact Gothic Medium.eot');
     src: url('../fonts/Didact Gothic Medium.eot?#iefix') format('embedded-opentype'),
     url('../fonts/Didact Gothic Medium.woff') format('woff'),
     url('../fonts/Didact Gothic Medium.ttf') format('truetype');
+    url('../fonts/Didact Gothic Medium.svg#Didact Gothic Medium') format('svg');
     font-weight: 500;
     font-style: normal;
 }
@@ -1009,8 +1010,7 @@ footer .agk-b-menu-title{
     margin-top: 12px;
     font-size: 18px;
 }
-.sub-title h4 {
-    font-family: 'Open Sans', sans-serif;
+ h4.sub-title{
     margin-top: 20px;
     margin-bottom: 25px;
     font-weight: 800;

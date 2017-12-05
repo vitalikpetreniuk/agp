@@ -1910,4 +1910,18 @@ span.hidden{
     position: absolute;
 }
 /*modal*/
-
+.apartment_list .flex-cont .item {
+    position: relative;
+}
+.sticker{
+    width: 68px;
+    height: 68px;
+    position: absolute;
+    top: -38px;
+    right: 30px;
+    background: url("../images/star.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}

@@ -64,6 +64,16 @@
     }
 }
 
+@media(max-width:1200px){
+    .sidebar .agk-slide img, .agk-news .image img {
+        width: auto;
+        height: 100%;
+    }
+    .agk-news .announc .title a {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
 @media(max-width:991px){
     .agk-about {
         padding: 20px 0 40px;
@@ -250,6 +260,11 @@
     .building form .sort {
         text-align: left;
         padding-right: 0;
+    }
+
+    .sidebar .agk-slide img, .agk-news .image img {
+        width: 100%;
+        height: auto;
     }
 }
 

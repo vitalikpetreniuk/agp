@@ -178,9 +178,29 @@ header .phone span:first-child::before{
     border-radius: 50%;
     z-index: -1;
 }
-header.active .phone span:first-child,
-header.active .phone span:first-child::before {
+header .header-dd-menu .phone span:first-child::before {
+    content: '';
     display: none;
+    background: transparent;
+    width:0;
+    height:0;
+}
+header .header-dd-menu .phone span:first-child{
+    margin:auto;
+    font-size: 25px;
+    text-align: center;
+    line-height: 1.4;
+    display: block;
+    width: auto;
+    height: auto;
+    background: transparent;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius:0;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+    margin-right: 0;
 }
 header .phone {
     margin-top: 12px;
@@ -221,7 +241,7 @@ header .header-menu ul > li:hover > a{
     text-decoration: underline;
 }
 .agk-dd-menu{
-    width:auto;
+    width:46px;
     position: absolute;
     top: 24px;
     right: 36px;
@@ -239,16 +259,15 @@ header .header-menu ul > li:hover > a{
 .agk-dd-menu.active .agk-dd-open {
     width: 46px;
     height: 46px;
-    padding-top: 6px;
+    padding-top: 9px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
     margin:auto;
-    margin-right: -8px;
     border: 3px solid #fff;
 }
 .agk-dd-menu.active  .agk-dd-open span {
-    margin-left: 8px;
+    margin-left: 14px;
 }
 
 .agk-dd-menu .agk-dd-open span{
@@ -285,7 +304,7 @@ header .header-menu ul > li:hover > a{
     color: #fff;
     top: 0;
     left: 0;
-    padding-top: 116px;
+    padding-top: 100px;
     width: 100%;
     height: 100vh;
     padding-bottom: 80px;

@@ -3,11 +3,20 @@
     src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
     font-weight:normal;
     font-style:normal}
+@font-face {
+    font-family: 'Didact Gothic';
+    src: url('../fonts/Didact Gothic Medium.eot');
+    src: url('../fonts/Didact Gothic Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Didact Gothic Medium.woff') format('woff'),
+    url('../fonts/Didact Gothic Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
 /*defoult*/
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Didact Gothic Medium', sans-serif;
     font-size: 16px;
     color: #000;
 }
@@ -34,11 +43,11 @@ h3{
     line-height: 72px;
 }
 h4{
-    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Didact Gothic Medium', sans-serif;
     font-size: 30px;
 }
 h5{
-    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Didact Gothic Medium', sans-serif;
     font-size: 18px;
     line-height: 60px;
 }
@@ -119,6 +128,9 @@ header.fixed{
     z-index: 500;
     width: 100vw;
 
+}
+header .col-lg-3{
+    margin-left: -25px;
 }
 header, footer{
     background: #03193d;
@@ -1093,7 +1105,7 @@ footer .agk-b-menu-title{
     font-size: 26px;
 }
 .apartment_inner .item h6{
-    font-family:"Didact Gothic", sans-serif;
+    font-family:"Didact Gothic Medium", sans-serif;
     font-size: 18px;
 
 }

@@ -242,7 +242,7 @@
     }
     .agk-dd-menu .header-dd-menu {
         width: 100%;
-        height: calc(100vh - 150px);
+        height: calc(100vh - 110px);
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -259,9 +259,21 @@
     }
     header.active .col-xs-1 {
         width: 100%;
+        text-align: center;
+    }
+    header.active .agk-dd-menu{
+        width:100%;
+        text-align: center;
+        position: relative;
+        left: auto;
+        right:auto;
+        top: auto;
+        margin:auto;
+        margin-top: 24px;
+        z-index:1000;
     }
     header.active .col-xs-offset-8 {
-        margin-left: 15px;
+        margin-left: 0;
         margin-top: -60px;
     }
     .building form .sort > * {

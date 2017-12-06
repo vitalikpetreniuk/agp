@@ -130,7 +130,7 @@ header.fixed{
     position: fixed;
     top:0;
     z-index: 500;
-    width: 100vw;
+    width: 100%;
 
 }
 header .col-lg-3{
@@ -151,7 +151,7 @@ header .logo img{
 .logo a{
     display: block;
 }
-header .phone span:first-child{
+header .phone span.icon-phone{
     display: inline-block;
     width: 27px;
     height: 27px;
@@ -167,7 +167,7 @@ header .phone span:first-child{
     text-align: center;
     margin-right: 15px;
 }
-header .phone span:first-child::before{
+header .phone span.icon-phone::before{
     content: '';
     display: block;
     background: #03193d;
@@ -180,30 +180,6 @@ header .phone span:first-child::before{
     -moz-border-radius: 50%;
     border-radius: 50%;
     z-index: -1;
-}
-header .header-dd-menu .phone span:first-child::before {
-    content: '';
-    display: none;
-    background: transparent;
-    width:0;
-    height:0;
-}
-header .header-dd-menu .phone span:first-child{
-    margin:auto;
-    font-size: 25px;
-    text-align: center;
-    line-height: 1.4;
-    display: block;
-    width: auto;
-    height: auto;
-    background: transparent;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius:0;
-    margin-bottom: 0;
-    position: relative;
-    z-index: 1;
-    margin-right: 0;
 }
 header .phone {
     margin-top: 12px;
@@ -249,9 +225,6 @@ header .header-menu ul > li:hover > a{
     top: 24px;
     right: 36px;
     z-index:1000;
-}
-.agk-dd-menu.active {
-    right: 50%;
 }
 .agk-dd-menu .agk-dd-open{
     border: none;
@@ -310,7 +283,6 @@ header .header-menu ul > li:hover > a{
     padding-top: 100px;
     width: 100%;
     height: 100vh;
-    padding-bottom: 80px;
     background: #03193d;
     z-index:-1;
 }

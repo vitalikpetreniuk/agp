@@ -119,10 +119,12 @@ $(function () {
             max: 17,
             values: [1, 6],
             slide: function (event, ui) {
-                $("#amount-flor").attr("placeholder", ui.values[0] + "                  " + ui.values[1]);
+                $("#amount-flor-min").attr("placeholder", ui.values[0]);
+                $("#amount-flor-max").attr("placeholder", ui.values[1]);
             }
         });
-        $("#amount-flor").val($("#slider-range-flor").slider("values", 0) + "                  " + $("#slider-range-flor").slider("values", 1));
+        $("#amount-flor-min").val($("#slider-range-flor").slider("values", 0));
+        $("#amount-flor-max").val($("#slider-range-flor").slider("values", 1));
     }
 
     if ($( "#slider-range-sq" ).length) {
@@ -132,10 +134,12 @@ $(function () {
             max: 300,
             values: [15, 100],
             slide: function (event, ui) {
-                $("#amount-sq").attr("placeholder", ui.values[0] + "                  " + ui.values[1]);
+                $("#amount-sq-min").attr("placeholder", ui.values[0]);
+                $("#amount-sq-max").attr("placeholder", ui.values[1]);
             }
         });
-        $("#amount-sq").val($("#slider-range-sq").slider("values", 0) + "                  " + $("#slider-range-sq").slider("values", 1));
+        $("#amount-sq-min").val($("#slider-range-sq").slider("values", 0));
+        $("#amount-sq-max").val($("#slider-range-sq").slider("values", 1));
     }
 
     if ($( "#slider-range-sum" ).length) {
@@ -145,10 +149,12 @@ $(function () {
             max: 15000000,
             values: [100000, 5000000],
             slide: function( event, ui ) {
-                $( "#amount-sum" ).attr( "placeholder", ui.values[ 0 ] +  "                  " + ui.values[ 1 ] );
+                $( "#amount-sum-min" ).attr( "placeholder", ui.values[ 0 ]);
+                $( "#amount-sum-max" ).attr( "placeholder", ui.values[ 1 ] );
             }
         });
-        $( "#amount-sum" ).val(  $( "#slider-range-sum" ).slider( "values", 0 )+  "                  " +  $( "#slider-range-sum" ).slider( "values", 1 ) );
+        $( "#amount-sum-min" ).val(  $( "#slider-range-sum" ).slider( "values", 0 ) );
+        $( "#amount-sum-max" ).val(  $( "#slider-range-sum" ).slider( "values", 1 ) );
     }
     $('#callback').modal({
             keyboard: true,

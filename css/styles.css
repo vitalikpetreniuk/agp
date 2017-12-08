@@ -1756,21 +1756,17 @@ span.hidden{
 .apartment_list .filtr p{
     position: relative;
 }
-.apartment_list .filtr p:before {
-   content: '';
+.apartment_list .filtr p:after{
+    content: '';
     display: block;
-    width: 20px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    -webkit-transform: translate(-10px, 0);
-    -moz-transform: translate(-10px, 0);
-    -ms-transform: translate(-10px, 0);
-    -o-transform: translate(-10px, 0);
-    transform: translate(-10px, 0);
-    z-index: 200;
-    background: #f2f2f2;
+    clear: both;
+}
+.apartment_list .filtr p input{
+    float: left;
+    width: 45%;
+}
+.apartment_list .filtr p input + input{
+    margin-left: 9%;
 }
 /*slider-range*/
 

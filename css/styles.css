@@ -967,12 +967,7 @@ footer .agk-b-menu-title{
 .apartment_inner .title .print:hover::before{
     height: 0;
 }
-.apartment_inner .flex-cont{
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
+
 .apartment_inner .flex-cont .item,
 .apartment_list .flex-cont .item{
     width: 18%;
@@ -1383,6 +1378,7 @@ span.hidden{
 /*calc*/
 
 /*apartment_list*/
+.apartment_inner .flex-cont,
 .apartment_list .flex-cont {
     margin: 0;
     -webkit-box-pack: start;
@@ -1390,9 +1386,11 @@ span.hidden{
     -ms-flex-pack: start;
     justify-content: flex-start;
 }
+.apartment_inner .flex-cont .item,
 .apartment_list .flex-cont .item{
     margin-right: calc((100% - 18%*5)/4);
 }
+.apartment_inner .flex-cont .item:nth-child(5n+5),
 .apartment_list .flex-cont .item:nth-child(5n+5){
     margin-right:0;
 }
